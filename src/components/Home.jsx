@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import bg from '../Img/Netflix.jfif';
+import bg from '../Img/Flexboy.png';
 import {Link} from 'react-router-dom';
 import MovieDetails from './MovieDetails';
 
@@ -31,7 +31,7 @@ const Home = () => {
          <>  <div key={show.show.id} className="p-4">
 
               <Link to={`/show/${show.show.id}`}>    <img
-                src={show.show.image ? show.show.image.medium : '../Img/Netflix.jfif'}
+                src={show.show.image ? show.show.image.medium : {bg}}
                 alt={`${show.show.name} poster`}></img>
 
                 <h1 className='text-white font-bold text-center p-4'>{show.show.name}</h1></Link>

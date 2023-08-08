@@ -25,13 +25,21 @@ useEffect(() => {
   }
 
   return (
-    <div className='bg-black h-[700px] flex flex-col justify-center items-center px-20'>
-  <h1 className='text-white font-bold text-3xl p-4'>{show.name}</h1>
-  <img src={show.image.medium}></img>
-
-<h6 className='text-white text-center pt-8 font-bold text-3xl'>Genre: {show.genres}</h6>
-  <p className='text-white text-xs text-center p-10 width-[70%]'>{show.summary}</p>
+    <div className='bg-black w-[100%] h-screen flex justify-center items-center px-20'>
+        <div className='w-[50%]'>
+ <img className="w-[60%] h-[60%]" src={show.image.medium}></img>
+        </div>
+        <div className='w-[50%] flex flex-col'>
+ <h1 className='text-white font-bold text-3xl'>{show.name}</h1>
+ <h6 className='text-white  pt-8 font-bold text-3xl'>Genre: {show.genres}</h6>
+ <h6 className='text-white  pt-8 font-bold text-3xl'>Genre: {show.language}</h6>
+  <p className='text-white text-xs py-8  width-[70%]'>{show.summary}</p>
   <Link to={`/Ticket/${show.id}`}> <button className='bg-pink-400 p-2 rounded-sm '>Book ticket</button></Link>
+        </div>
+ 
+ 
+
+
 
     </div>
   );
